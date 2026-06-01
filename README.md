@@ -28,44 +28,44 @@ To write a program for mean, variance and cross correlation in SCILAB and verify
 clear;
 clc;
 clear;
-function X=f(x)
-    z=2*(2-x)^2
-    X=x*z
+function X=f(x);
+    z=4*(1-x)^2;
+    X=x*z;
 endfunction
 a=0;
 b=1;
 EX=intg(a,b,f);
-function Y=c(y)
-    z=2*(2-y)^2
-    Y=y*z
+function Y=c(y);
+    z=4*(1-y)^2;
+    Y=y*z;
 endfunction
 EY=intg(a,b,c);
-disp(EX,"i)Mean of X=")
-disp(EY,"Mean of Y=")
-
-function X=g(x)
-    z=2*(2-x)^2
-    X=x^2*z
+disp(EX,"Mean of X =")
+disp(EY,"Mean of Y =")
+function X=g(x);
+    z=4*(1-x)^2;
+    X=x^2*z;
 endfunction
 a=0;
 b=1;
 EX2=intg(a,b,g);
-function Y=h(y)
-    z=2*(2-y)^2
-    Y=y^2*z
+function Y=h(y);
+    z=4*(1-y)^2;
+    Y=y^2*z;
 endfunction
 EY2=intg(a,b,h);
 vX2=EX2-(EX)^2;
 vY2=EY2-(EY)^2;
-disp(vX2,"ii) Variance of X");
+disp(vX2,"Variance of X");
 disp(vY2,"Variance of Y");
 
-x=[1 3 4 6 7 9 2 8];
-y=[2 5 8 4 6 1 3 7];
+x= [1,3,5,7,8,6,4,2]; 
+y= [2,4,6,8,7,5,3,1];
 n1=max(size(y))-1;
 n2=max(size(x))-1;
 r=corr(x,y,n1);
 plot2d3('gnn',r);
+
 ```
 
 # TABULATION:
@@ -76,7 +76,7 @@ plot2d3('gnn',r);
 
 # CALCULATION:
 
-<img width="1600" height="871" alt="image" src="https://github.com/user-attachments/assets/d8bebd69-7346-4885-80d2-fd4de00ffb6f" />
+<img width="1600" height="1509" alt="image" src="https://github.com/user-attachments/assets/943becde-08c4-40d3-a2d0-2d23b227191c" />
 <img width="724" height="1280" alt="image" src="https://github.com/user-attachments/assets/840f5664-29b6-4f0d-ae25-acdff77e38a1" />
 <img width="969" height="1280" alt="image" src="https://github.com/user-attachments/assets/9285b97e-639f-4d42-943c-f16ec4122158" />
 
